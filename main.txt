@@ -1,9 +1,12 @@
 async function startProgram() {
 	await smallsquare ()
+
+
 }
+
 async function smallsquare(){
 	//65cm sides
-	// This is our sample code for making the RVR drive in a square.
+	// This is Andy's code for making the RVR drive in a square.
 
 	await roll(0,50,2.0) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
 	await stopRoll()
@@ -16,9 +19,65 @@ async function smallsquare(){
 	await roll(180,50,2.0)
 	await stopRoll()
 	await roll(270,1,0.75)
+
 	await stopRoll()
 	await roll(270,50,2.0)
 	await stopRoll()
 	
 	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
+  
+  
+  }
+  
+async function tiga_square(){
+	// This is our sample code for making the RVR drive in a square.
+
+	await roll(0,30,4.0) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
+	await stopRoll()
+	await roll(90,1,0.5) //To adjust the heading before driving into another direction
+	await stopRoll()
+	await roll(90,60,4.0) //Continue for each corner of the square
+	await stopRoll()
+	await roll(180,1,0.5)
+	await stopRoll()
+	await roll(180,60,4.0)
+	await stopRoll()
+	await roll(270,1,0.5)
+	await stopRoll()
+	await roll(270,60,4.0)
+	await stopRoll()
+	
+	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
 }
+
+async robert_square() {
+
+	// This is our sample code for making the RVR drive in a square.
+
+	await roll(0,50,1.8) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
+	await stopRoll()
+	await roll(90,50,2.875) //Continue for each corner of the square
+	await stopRoll()
+	await roll(180,50,2.85)
+	await stopRoll()
+	await roll(270,50,2.8)
+	await stopRoll()
+	
+	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
+
+}
+
+async Horace_square() {
+	// This is our sample code for making the RVR drive in a square.
+
+	await roll(0,50,1.8) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
+	await stopRoll()
+	await roll(90,50,2.4) //Continue for each corner of the square
+	await stopRoll()
+	await roll(180,50,2.5)
+	await stopRoll()
+	await roll(270,50,2.4)
+  	await stopRoll()
+	
+	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
+ }
