@@ -7,20 +7,18 @@ async function smallsquare(){
 
 	await roll(0,50,2.0) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
 	await stopRoll()
-	await roll(90,1,0.5)
+	await roll(90,1,0.75)
 	await stopRoll()
 	await roll(90,50,2.0) //Continue for each corner of the square
 	await stopRoll()
-	await roll(180,1,0.5)
+	await roll(180,1,0.75)
 	await stopRoll()
 	await roll(180,50,2.0)
 	await stopRoll()
-	await roll(270,1,0.5)
+	await roll(270,1,0.75)
 	await stopRoll()
 	await roll(270,50,2.0)
 	await stopRoll()
 	
 	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
 }
-
-//This is some great stuff, Andy. You can approve this comment being added to the code through the pull request.
