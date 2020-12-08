@@ -1,22 +1,3 @@
-async function startProgram() {
-	// This is our sample code for making the RVR drive in a square.
-
-	await roll(0,50,1.7) //Drive for two seconds at a speed of 75 at a heading of 0 degrees.
-	await stopRoll()
-	await roll(90,60,2.2) //Continue for each corner of the square
-	await stopRoll()
-	await roll(180,58,2.3)
-	await stopRoll()
-	await roll(270,65,2.0)
-	await stopRoll()
-	
-	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
-	
-}
-
-// Look! I'm making edits in your code. Isn't that great? You can approve my changes by approving the pull request.
-
-// Tiga's robot positioning code
 // 7 RVR
 // Robot 1 to 7, left to right.
 // The distance for running 50 for 2 second is 65
@@ -25,15 +6,18 @@ async function startProgram() {
 // Which is 50 for 0.3 second
 
 async function giftBox(){
-	await roll(0,50,2.0)
+	await roll(0,50,2.5)
 	await stopRoll()
-	await roll(90,50,2.0)
+	await delay (0.2)
+	await roll(90,50,2.5)
 	await stopRoll()
-	await roll(180,50,2.0)
+	await delay (0.2)
+	await roll(180,50,2.5)
 	await stopRoll()
-	await roll(270,50,2.0)
+	await delay (0.2)
+	await roll(270,50,2.5)
 	await stopRoll()
-	await setHeading(0)
+	await delay (0.2)
 }
 
 // Robot 1 goes to the top for star
@@ -48,7 +32,7 @@ async function giftBox(){
 async function robot1(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Moving to the big star
 	// Turn off light for changing position
 	setMainLed({ r: 0, g: 0, b: 0 })
@@ -58,14 +42,14 @@ async function robot1(){
 	setMainLed({ r: 255, g: 255, b: 0 })
 	while (true) {
 		// Put in the function of the shape
-		myFunction()
+		
 	}
 }
 
 async function robot2(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Moving to the big star
 	// Turn off light for changing position
 	setMainLed({ r: 0, g: 0, b: 0 })
@@ -75,7 +59,7 @@ async function robot2(){
 	setMainLed({ r: 255, g: 255, b: 0 })
 	while (true) {
 		// Put in the function of the shape
-		myFunction()
+		
 	}
 }
 
@@ -85,7 +69,7 @@ async function robot2(){
 async function robot3(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Moving to the top trunk
 	// Turn off light for changing position
 	setMainLed({ r: 0, g: 0, b: 0 })
@@ -95,7 +79,7 @@ async function robot3(){
 	setMainLed({ r: 255, g: 0, b: 0 })
 	while (true) {
 		//Keep doing trunk
-		giftBox()
+		await giftBox()
 		
 	}
 	
@@ -105,12 +89,12 @@ async function robot3(){
 async function robot4(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Tree trunk light
-	setMainLed({ r: 255, g: 0, b: 0 })
+	setMainLed({ r: 204, g: 102, b: 0 })
 	while (true) {
 		//Keep doing trunk
-		giftBox()
+		await giftBox()
 	}
 	
 }
@@ -118,7 +102,7 @@ async function robot4(){
 async function robot5(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Moving to the big star
 	// Turn off light for changing position
 	setMainLed({ r: 0, g: 0, b: 0 })
@@ -128,14 +112,14 @@ async function robot5(){
 	setMainLed({ r: 0, g: 255, b: 0 })
 	while (true) {
 		// Put in the function of the shape
-		myFunction()
+		
 	}
 }
 	
 async function robot6(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Moving to the big star
 	// Turn off light for changing position
 	setMainLed({ r: 0, g: 0, b: 0 })
@@ -145,14 +129,14 @@ async function robot6(){
 	setMainLed({ r: 0, g: 255, b: 0 })
 	while (true) {
 		// Put in the function of the shape
-		myFunction()
+		
 	}
 }
 	
-async function robot6(){
+async function robot7(){
 	// Gift box light
 	setMainLed({ r: 255, g: 0, b: 0 })
-	giftBox()
+	await giftBox()
 	// Moving to the big star
 	// Turn off light for changing position
 	setMainLed({ r: 0, g: 0, b: 0 })
@@ -162,13 +146,12 @@ async function robot6(){
 	setMainLed({ r: 0, g: 255, b: 0 })
 	while (true) {
 		// Put in the function of the shape
-		myFunction()
+		
 	}
 }	
 	
 
 async function startProgram() {
 	// Write code here
-	
+	await robot1()
 }
-// Tiga's code ends here
