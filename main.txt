@@ -5,7 +5,7 @@ async function startProgram() {
 }
 async function smallSquare(){
 	//65cm sides
-	// This is our sample code for making the RVR drive in a square.
+	// This is Andy's sample code for making the RVR drive in a square.
 
 	await roll(0,50,2.0) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
 	await stopRoll()
