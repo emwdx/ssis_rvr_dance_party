@@ -6,16 +6,16 @@
 // Which is 50 for 0.3 second
 
 async function giftBox(){
-	await roll(0,50,2.5)
+	await roll(0,50,2.0)
 	await stopRoll()
 	await delay (0.2)
-	await roll(90,50,2.5)
+	await roll(90,50,2.0)
 	await stopRoll()
 	await delay (0.2)
-	await roll(180,50,2.5)
+	await roll(180,50,2.0)
 	await stopRoll()
 	await delay (0.2)
-	await roll(270,50,2.5)
+	await roll(270,50,2.0)
 	await stopRoll()
 	await delay (0.2)
 }
