@@ -15,3 +15,160 @@ async function startProgram() {
 }
 
 // Look! I'm making edits in your code. Isn't that great? You can approve my changes by approving the pull request.
+
+// Tiga's robot positioning code
+// 7 RVR
+// Robot 1 to 7, left to right.
+// The distance for running 50 for 2 second is 65
+// The box is a 65cm quare
+// The distance between boxes can be 20cm
+// Which is 50 for 0.3 second
+
+async function giftBox(){
+	await roll(0,50,2.0)
+	await stopRoll()
+	await roll(90,50,2.0)
+	await stopRoll()
+	await roll(180,50,2.0)
+	await stopRoll()
+	await roll(270,50,2.0)
+	await stopRoll()
+	await setHeading(0)
+}
+
+// Robot 1 goes to the top for star
+// Robot 2 goes to the top for the smaller star
+// Robot 3 goes to the the top tree trunk
+// Robot 4 stays the same and changes color for tree trunk
+// Robot 5 goes to the top leaf
+// Robot 6 goes to the second top leaf
+// Robot 7 goes to the third top leaf
+// Present box light: setMainLed({ r: 255, g: 0, b: 0 })
+
+async function robot1(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Moving to the big star
+	// Turn off light for changing position
+	setMainLed({ r: 0, g: 0, b: 0 })
+	await roll(0,50,10.3)// This is the vertical distance, you can cange for whatever that suits
+	await roll(0,50, 3)// This is the horizontal distance, you can cange for whatever that suits
+	// Color yellow for star, you can cange for whatever that suits
+	setMainLed({ r: 255, g: 255, b: 0 })
+	while (true) {
+		// Put in the function of the shape
+		myFunction()
+	}
+}
+
+async function robot2(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Moving to the big star
+	// Turn off light for changing position
+	setMainLed({ r: 0, g: 0, b: 0 })
+	await roll(0,50,10.3)// This is the vertical distance, you can cange for whatever that suits
+	await roll(90,50, 4)// This is the horizontal distance, you can cange for whatever that suits
+	// Color yellow for star, you can cange for whatever that suits
+	setMainLed({ r: 255, g: 255, b: 0 })
+	while (true) {
+		// Put in the function of the shape
+		myFunction()
+	}
+}
+
+
+
+
+async function robot3(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Moving to the top trunk
+	// Turn off light for changing position
+	setMainLed({ r: 0, g: 0, b: 0 })
+	await roll(0,50,2.3)
+	await roll(90,50,2.3)
+	// Tree trunk light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	while (true) {
+		//Keep doing trunk
+		giftBox()
+		
+	}
+	
+}
+
+
+async function robot4(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Tree trunk light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	while (true) {
+		//Keep doing trunk
+		giftBox()
+	}
+	
+}
+	
+async function robot5(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Moving to the big star
+	// Turn off light for changing position
+	setMainLed({ r: 0, g: 0, b: 0 })
+	await roll(0,50,9.3)// This is the vertical distance, you can cange for whatever that suits
+	await roll(270,50, 3.3)// This is the horizontal distance, you can cange for whatever that suits
+	// Color green for leaf, you can cange for whatever that suits
+	setMainLed({ r: 0, g: 255, b: 0 })
+	while (true) {
+		// Put in the function of the shape
+		myFunction()
+	}
+}
+	
+async function robot6(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Moving to the big star
+	// Turn off light for changing position
+	setMainLed({ r: 0, g: 0, b: 0 })
+	await roll(0,50,7.3)// This is the vertical distance, you can cange for whatever that suits
+	await roll(270,50, 5.3)// This is the horizontal distance, you can cange for whatever that suits
+	// Color green for leaf, you can cange for whatever that suits
+	setMainLed({ r: 0, g: 255, b: 0 })
+	while (true) {
+		// Put in the function of the shape
+		myFunction()
+	}
+}
+	
+async function robot6(){
+	// Gift box light
+	setMainLed({ r: 255, g: 0, b: 0 })
+	giftBox()
+	// Moving to the big star
+	// Turn off light for changing position
+	setMainLed({ r: 0, g: 0, b: 0 })
+	await roll(0,50,5.3)// This is the vertical distance, you can cange for whatever that suits
+	await roll(270,50, 7.3)// This is the horizontal distance, you can cange for whatever that suits
+	// Color green for leaf, you can cange for whatever that suits
+	setMainLed({ r: 0, g: 255, b: 0 })
+	while (true) {
+		// Put in the function of the shape
+		myFunction()
+	}
+}	
+	
+
+async function startProgram() {
+	// Write code here
+	
+}
+// Tiga's code ends here
